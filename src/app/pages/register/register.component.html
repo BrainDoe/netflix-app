@@ -1,0 +1,22 @@
+<div class="register">
+  <div class="top">
+    <div class="wrapper">
+      <img class="logo" src="../../../assets/images/netflix-logo.PNG" alt="Logo">
+      <button class="login-button">Sign In</button>
+    </div>
+  </div>
+  <div class="container">
+    <h1>Unlimited movies, TV shows, and more</h1>
+    <h2>Watch anywhere. Cancel anytime.</h2>
+    <p>Ready to watch? Enter your email to reate or restart your subscription</p>
+    <div class="input" *ngIf="!email">
+      <input type="email" name="email" id="email" placeholder="Email address" #emailRef>
+      <button class="register-button" (click)="handleStart()">Get Started</button>
+    </div>
+
+    <form class="input" *ngIf="email">
+      <input type="password" name="password" id="password" placeholder="Enter Password" #passwordRef>
+      <button class="register-button" (click)="handleFinish()">Start</button>
+    </form>
+  </div>
+</div>

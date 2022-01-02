@@ -1,0 +1,26 @@
+<div class="list-item" (mouseenter)="hovered()" (mouseleave)="unHovered()" >
+  <!-- [ngStyle]="{'top': isHovered && (index * 255 - 50) + (index * 2.5)}" -->
+  <!-- [ngStyle]="{'left': isHovered && index * 225 - 50}" -->
+  <!-- <img src="{{ movie.img }}" alt="Movie  Banner"> -->
+  <img src="{{ movie?.img }}" alt="Movie Image">
+  <div *ngIf="isHovered" [routerLink]="['/watch']" (click)="goWatch()">
+    <video [src]="movie.trailer" loop></video>
+    <div class="item-info">
+      <div class="icons">
+        <i class="pi pi-play icon" style="font-size: 1.4rem; margin: 0 15px; cursor: pointer;"></i>
+        <i class="pi pi-plus icon" style="font-size: 1.4rem; margin: 0 15px; cursor: pointer;"></i>
+        <i class="pi pi-thumbs-up icon" style="font-size: 1.4rem; margin: 0 15px; cursor: pointer;"></i>
+        <i class="pi pi-thumbs-down icon" style="font-size: 1.4rem; margin: 0 15px; cursor: pointer;"></i>
+      </div>
+      <div class="item-info-top">
+        <span>1 hour 14 mins</span>
+        <span class="age-limit">+{{ movie.limit }}</span>
+        <span>{{ movie.year }}</span>
+      </div>
+      <div class="desc">
+        {{ movie.desc }}
+      </div>
+      <div class="genre">{{ movie.genre }}</div>
+    </div>
+  </div>
+</div>

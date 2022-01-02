@@ -1,0 +1,5 @@
+<app-nav-bar></app-nav-bar>
+<app-features [type]="type"></app-features>
+<div *ngFor="let list of moviesList; let i = index">
+  <app-list [list]="list" [index]="i"></app-list>
+</div>

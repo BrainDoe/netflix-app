@@ -1,0 +1,12 @@
+<div class="list">
+  <span class="list-title">{{ list.title }}</span>
+  <div class="wrapper">
+    <i class="pi pi-angle-left slider-arrow left" id="slider-arrow left" style="font-size: 3rem; cursor: pointer;" (click)="handleClick('left')"></i>
+    <!-- [ngStyle]="{'display': !isMoved && 'none'}" -->
+    <!-- [ngStyle]="{'background-color': color}" -->
+    <div class="wrap" #listContainerRef>
+      <app-list-item [item]="listContent" [index]="index"></app-list-item>
+    </div>
+    <i class="pi pi-angle-right slider-arrow right" id="slider-arrow right" style="font-size: 3rem; cursor: pointer;" (click)="handleClick('right')"></i>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="login">
+  <div class="top">
+    <div class="wrapper">
+      <img class="logo" src="../../../assets/images/netflix-logo.PNG" alt="Logo">
+    </div>
+  </div>
+  <div class="container">
+    <form [formGroup]="form">
+      <h1>Sign In</h1>
+      <input type="email" name="email" id="email" placeholder="Enter Email" formControlName="email" />
+      <small *ngIf="loginForm.email.invalid && isSubmitted" class="p-error">Name is required</small>
+
+      <input type="password" name="password" id="password" placeholder="Enter Password" formControlName="password" />
+      <small *ngIf="loginForm.password.invalid && isSubmitted" class="p-error">Password is required</small>
+
+      <button class="login-button" (click)="onSubmit()">Sign In</button>
+      <span>New to NetFlix? <b>Sign up now</b></span>
+      <small>
+        This page is protected by Google reCAPTCHA to ensure you're not a robot. <b>Learn more</b>
+      </small>
+    </form>
+  </div>
+</div>

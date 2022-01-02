@@ -1,0 +1,39 @@
+<div class="featured">
+  <div class="category" *ngIf="type">
+    <span>{{ type === 'movie' ? 'Movies' : 'Series' }}</span>
+    <select name="genre" id="genre">
+      <option>Genre</option>
+      <option value="adventure">Adventure</option>
+      <option value="comedy">Comedy</option>
+      <option value="crime">Crime</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="historical">Historical</option>
+      <option value="horror">Horror</option>
+      <option value="romance">Romance</option>
+      <option value="sci-fi">Sci-fi</option>
+      <option value="thriller">Thriller</option>
+      <option value="western">Western</option>
+      <option value="animation">Animation</option>
+      <option value="drama">Drama</option>
+      <option value="documentary">Documentary</option>
+    </select>
+  </div>
+  <img src="../../../assets/images/background.jpeg" alt="">
+  <div class="info">
+    <h1 style="font-family: cursive; font-size: 40px;">{{ randomContent.title }}</h1>
+    <span class="desc">
+      {{ randomContent.desc }}
+    </span>
+    <div class="buttons">
+      <button class="play">
+        <i class="pi pi-play" style="font-size: 1.4rem; margin: 0 15px; cursor: pointer;"></i>
+        <span>Play</span>
+      </button>
+      <button class="more">
+        <i class="pi pi-info-circle" style="font-size: 1.4rem; margin: 0 15px; cursor: pointer;"></i>
+        <span>Info</span>
+      </button>
+    </div>
+
+  </div>
+</div>
